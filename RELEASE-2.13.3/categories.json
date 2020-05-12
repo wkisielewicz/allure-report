@@ -1,29 +1,36 @@
 [
   {
+    "name": "Product defect",
+    "matchedStatuses": [
+      "failed"
+    ]
+  },
+  {
     "name": "Ignored tests",
-    "matchedStatuses": [ "skipped" ]
+    "matchedStatuses": [
+      "skipped"
+    ]
   },
   {
-    "name": "Infrastructure problems",
-    "matchedStatuses": [ "broken", "failed" ],
-    "messageRegex": ".*bye-bye.*"
+    "name": "Infra problem",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*RuntimeException.*"
   },
   {
-    "name": "Outdated tests",
-    "matchedStatuses": [ "broken" ],
-    "traceRegex": ".*FileNotFoundException.*"
+    "name": "Tests with codification problem",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*org.openqa.selenium.*",
+    "flaky": true
   },
   {
-    "name": "Product defects",
-    "matchedStatuses": [ "failed" ],
-    "traceRegex": ".*AssertionException.*"
-  },
-  {
-    "name": "Test defects",
-    "matchedStatuses": [ "broken" ]
-  },
-  {
-    "name": "Passed tests",
-    "matchedStatuses": [ "passed" ]
+    "name": "Tests with codification problem",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*org.openqa.selenium.*"
   }
 ]
